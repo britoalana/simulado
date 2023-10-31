@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav>
+    <img class="img" src="/assets/img/cat.png" alt="" width="100px" height="80px">
+
+    <ul>
+      {{#if session.userId}}
+      <li><a href="/logout">Sair</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      <li><a href="/cadastro">Registrar</a></li>
+       {{/if}}
+    </ul>
+  </nav>
+  {{{body}}}
+ 
+  <footer>
+    <p>Todos os direitos reservados <span>&copy;</span></p>
+  </footer>
+</body>
+</html>
